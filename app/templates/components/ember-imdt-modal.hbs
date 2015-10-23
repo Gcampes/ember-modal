@@ -1,0 +1,28 @@
+<button type="button" name="button" {{action 'open'}}>Abrir</button>
+
+<div class="ember-imdt-modal-container">
+  <div class="ember-imdt-modal-header">
+    <span class="ember-imdt-modal-title">
+      {{title}}
+    </span>
+    <button type="button" name="button">
+      <span {{action 'close'}}>
+        ×
+      </span>
+    </button>
+  </div>
+  <div class="ember-imdt-modal-body">
+    {{#if body}}
+      {{partial body}}
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </div>
+  <div class="ember-imdt-modal-footer">
+    {{#if footer}}
+      {{partial footer}}
+    {{else}}
+      <button type="button" name="button" {{action 'close'}}>Close</button>
+    {{/if}}
+  </div>
+</div>
