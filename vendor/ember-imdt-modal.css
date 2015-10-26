@@ -16,10 +16,6 @@
   display: block;
 }
 
-.ember-imdt-modal-header{
-  cursor: move;
-}
-
 .ember-imdt-modal-title{
   font-size: 22px;
 }

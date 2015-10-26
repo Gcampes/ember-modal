@@ -10,7 +10,5 @@ module.exports = {
       this._super.included(app);
 
       app.import('vendor/ember-imdt-modal.css');
-
-      app.import('bower_components/jquery-ui/jquery-ui.js');
   }
 };
