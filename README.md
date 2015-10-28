@@ -45,11 +45,10 @@ actions: {
 ```
 
 The supported methods and shorthands are:
---------
-|custom|
-|alert|
-|confirm|
----------
+
+custom
+confirm
+alert
 
 ## Running
 
