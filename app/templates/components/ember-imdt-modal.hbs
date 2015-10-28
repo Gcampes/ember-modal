@@ -1,5 +1,5 @@
 {{#if modal.options.overlay}}
-<div class="ember-imdt-modal-overlay" {{action 'close'}}>
+<div class="ember-imdt-modal-overlay" {{action 'modalClose'}}>
 </div>
 {{/if}}
 <div class="ember-imdt-modal-container">
@@ -10,7 +10,7 @@
       <span class="ember-imdt-modal-title">
         {{modal.options.title}}
       </span>
-      <button type="button" name="button"  {{action 'close'}}>
+      <button type="button" name="button"  {{action 'modalClose'}}>
         <span>
           ×
         </span>
@@ -25,10 +25,8 @@
       {{/if}}
   </div>
   <div class="ember-imdt-modal-footer">
-    {{#if modal.options.footerTemplate}}
-      {{partial modal.options.footerTemplate}}
-    {{else}}
-      <button type="button" name="button" {{action 'close'}}>Close</button>
-    {{/if}}
+    {{#each modal.options.buttons as |button|}}
+      <button type="button" name="{{button.label}}" {{action button.action}}>{{button.label}}</button>
+    {{/each}}
   </div>
 </div>

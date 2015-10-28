@@ -5,17 +5,14 @@ export default Ember.Component.extend({
   classNames: ['ember-imdt-modal'],
 
   actions:{
-    close(){
-      this.overlay().fadeOut('fast');
-      this.modalElement().fadeOut('fast');
+    modalClose(){
+      this.modal.hide();
+    },
+    modalCancel(){
+      return false;
+    },
+    modalConfirm(){
+      return true;
     }
-  },
-
-  overlay(){
-    return this.$('.ember-imdt-modal-overlay');
-  },
-
-  modalElement(){
-    return this.$('.ember-imdt-modal-container');
   },
 });

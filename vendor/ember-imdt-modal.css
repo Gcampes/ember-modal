@@ -8,6 +8,10 @@
   max-width: 700px;
 }
 
+.ember-imdt-modal-container.visible, .ember-imdt-modal-overlay.visible{
+  display: block;
+}
+
 .ember-imdt-modal-container:after{
   content: ".";
   visibility: hidden;

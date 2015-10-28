@@ -1,30 +1,24 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-
-  modalDidChange: Ember.observer('service.modal.title', function(){
-    console.log(this.get('service.modal'));
-  }),
-
   actions: {
-    openModal1(){
-      let modal = {
-        title: "Modal 1",
-        body: "This is the modal body, you can change this by passing a modal object on openModal",
-      };
-
-      this.modal.openModal(modal);
+    confirm(){
+      this.modal.confirm("This is a confirmation modal");
     },
 
-    openModal2(){
-      let modal = {
-        title: "Modal 2",
+    alert(){
+      this.modal.alert("This is an alert modal", 1000);
+    },
+
+    custom(){
+      let options = {
+        title: "Custom",
         bodyTemplate: "custom/body",
         footerTemplate: "custom/footer",
         overlay: false
       };
 
-      this.modal.openModal(modal);
+      this.modal.custom(options);
     }
   }
 });
