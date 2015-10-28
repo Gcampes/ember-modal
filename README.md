@@ -12,7 +12,7 @@ It is inspired in the Ember-cli-flash Service implementation: https://github.com
 ## Usage
 
 To display a modal all you need to do is this:
-´´´javascript
+```javascript
 //app/controllers/yourcontroller.js
 
 actions: {
@@ -21,7 +21,7 @@ actions: {
     this.modal.alert("This will be displayed in the modal alert", 500);        
   }
 }
-´´´
+```
 
 ## Running
 
