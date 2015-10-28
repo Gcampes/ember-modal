@@ -1,7 +1,7 @@
 # Ember-modal
 This is an Ember Modal Component.
 This Modal is a service, so you can easily call it whenever and wherever you need.
-It is inspired in the Ember-cli-flash Service implementation: https://github.com/poteto/ember-cli-flash.
+It is inspired in the ember-cli-flash Service implementation: https://github.com/poteto/ember-cli-flash.
 
 ## Installation
 
