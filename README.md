@@ -44,26 +44,6 @@ actions: {
 
 ```
 
-Here we create our own modal using the custom method
-
-```javascript
-//app/controllers/yourcontroller.js
-// Using the Alert shorthand
-
-actions: {
-  someAction(){
-    let options = {
-      title: "Custom",
-      bodyTemplate: "custom/body",
-      footerTemplate: "custom/footer",
-      overlay: false
-    };
-
-    this.modal.custom(options);
-  }
-}
-```
-
 The supported methods and shorthands are
 
 Method  |Description
