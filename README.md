@@ -11,8 +11,21 @@ It is inspired in the ember-cli-flash Service implementation: https://github.com
 
 ## Usage
 
-To display a modal all you need to do is install the addon and choose a shorthand or create your custom modal like the example below. 
+To display a modal all you need to do is install the addon and follow the steps below. 
 Currently the only way to install is following the install instructions and npm link the repo to your application. 
+###### Place the component on the application.hbs
+```handlebars
+<!-- app/templates/application.hbs -->
+
+
+<h2 id="title">Welcome to Ember</h2>
+  {{outlet}}
+  
+  <!-- This is where the modal will be rendered -->
+  {{ember-imdt-modal}}
+```
+
+###### Choose a shorthand or create your custom modal.
 ```javascript
 //app/controllers/yourcontroller.js
 
@@ -44,8 +57,10 @@ actions: {
 
 ```
 
-The supported methods and shorthands are
+###### Done!
 
+
+##### The suported modals are: 
 Method  |Description
 --------|----------------------------------------------------------------------------
 custom  |Displays a custom modal, with a custom title, body and buttons.
