@@ -32,6 +32,11 @@ export default Ember.Service.extend({
   },
 
   /*
+  Modal confirm response
+  */
+  response: undefined,
+
+  /*
   Display a custom modal from the given options
   */
   custom(options){
@@ -46,6 +51,7 @@ export default Ember.Service.extend({
     let defaultOptions = this.get('defaultOptions');
 
     if(options){
+      this.set('response', undefined);
       this.set('options.title', options.title || defaultOptions.title);
       this.set('options.body', options.body || defaultOptions.body);
       this.set('options.bodyTemplate', options.bodyTemplate || defaultOptions.bodyTemplate);
@@ -87,7 +93,7 @@ export default Ember.Service.extend({
   Returns the modal element
   */
   modalElement(){
-    return $('.ember-imdt-modal-container');
+    return $('.ember-imdt-modal');
   },
 
   /*

@@ -1,18 +1,23 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  service: Ember.inject.service('ember-imdt-modal'),
   classNames: ['ember-imdt-modal'],
+
+  responseDidChange: Ember.observer('modal.response', function(){
+    console.log(this.get('modal.response'));
+  }),
 
   actions:{
     modalClose(){
       this.modal.hide();
     },
     modalCancel(){
-      return false;
+      this.modal.set('response', false);
+      this.send('modalClose');
     },
     modalConfirm(){
-      return true;
+      this.modal.set('response', true);
+      this.send('modalClose');
     }
   },
 });
